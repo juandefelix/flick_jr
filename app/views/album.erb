@@ -1,0 +1,9 @@
+<div class='container'>
+  <p> Photos in album "<%= @album.name%>" by <%= @user_name %></p>
+  <% @album.photos.each do |ph|%>
+  <div class='post'>
+    <a href="/photo/<%=ph.id %>"><%= ph.name%></a><br>
+  </div>
+  <% end %>
+</div>
+</div>

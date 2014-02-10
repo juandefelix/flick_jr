@@ -1,0 +1,14 @@
+<div class="top-nav">
+  <% if session[:user_id] %>
+    <h1 class='floatleft'>
+      <a class="navlink" href='/user/<%=session[:user_id]%>'>Hi, <%=User.find(session[:user_id]).name%> !</a>
+    </h1>
+      <a class="navlink floatright" href='/logout'>Log out</a>
+
+  <% else %>
+    <h1><a class="navlink floatleft"> Flick Clone</a></h1>
+    <a class="navlink floatright" href="/signup" class='floatright'> Sign up </a>
+    <a class="navlink floatright" href="/userlogin" class='floatright'> Log in </a>
+  <% end %>
+
+</div>
