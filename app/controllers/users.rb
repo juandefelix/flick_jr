@@ -43,6 +43,6 @@ post '/user/new' do
 end
 
 get '/user/:id' do
-  name =User.find(params[:id]).name
-  "#{name}"'s Profile'
+  @user =User.find(session[:user_id])
+  erb :user_profile
 end
